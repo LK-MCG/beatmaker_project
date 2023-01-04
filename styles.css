@@ -1,0 +1,139 @@
+* {
+  margin:  0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+i,svg {
+  pointer-events: none;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background: #ea5f5f;
+}
+
+.snare-pad {
+  background: #5ed05e;
+}
+
+.hihat-pad {
+  background: #4242ef;
+}
+
+.kick-pad.active {
+  background: #f10909;
+}
+
+.snare-pad.active {
+  background: #05da05;
+}
+
+.hihat-pad.active {
+  background: #0505d8;
+}
+
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hihat-track,
+.snare-track,
+.kick-track
+ {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5rem;
+  width: 70%;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.play {
+  font-weight: 900;
+  color: white;
+  background: #263238;
+  padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+}
+
+.play {
+  margin-top: 2rem;
+  outline: none;
+}
+
+.mute {
+  color: white;
+  background: #585858;
+  padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+  pointer: cursor;
+  outline: none;
+}
+
+.mute.active {
+  background:  #9e9e9e;
+}
+
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+
+.tempo-slider {
+  padding: 0.5rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background: grey;
+  cursor: pointer;
+  border-radius: 1rem;
+  outline: none;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+#kick-select, #snare-select, #hihat-select {
+  padding: 0.8rem 0.5rem 0.8rem 0.8rem;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+
+@keyframes playTrack{
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.2);
+  }
+}
